@@ -1,0 +1,17 @@
+:root { --navy:#0b1a3a; --gold:#d4af37; --white:#fff; }
+*{box-sizing:border-box;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial}
+body{margin:0;background:#f6f8fb;color:#222}
+.topbar{background:var(--navy);color:var(--white);padding:18px 16px;text-align:center;border-bottom:4px solid var(--gold)}
+.nav{display:flex;gap:12px;justify-content:center;padding:10px;background:#e9eef6}
+.nav a{color:var(--navy);text-decoration:none;font-weight:600}
+main{max-width:980px;margin:28px auto;padding:0 16px}
+h1,h2{margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
+.card{background:#fff;border:1px solid #dfe3ea;border-radius:10px;padding:14px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+label{display:block;margin:10px 0 6px;font-weight:600}
+input,select,textarea{width:100%;padding:10px;border:1px solid #cdd6e1;border-radius:8px}
+button{padding:10px 14px;border:0;border-radius:8px;background:var(--navy);color:#fff;font-weight:700;cursor:pointer}
+button:hover{filter:brightness(1.1)}
+.pricing{list-style:disc;margin-left:22px}
+.disclaimer{font-size:.9rem;opacity:.8;border-left:4px solid var(--gold);padding-left:10px}
+.footer{margin:40px 0 20px;text-align:center;color:#555}
