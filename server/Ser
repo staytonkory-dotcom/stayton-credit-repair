@@ -1,0 +1,33 @@
+import express from "express";
+import cors from "cors";
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Health check
+app.get("/api/health", (req,res)=> res.json({ok:true}));
+
+// Save contact message (demo: in-memory)
+const messages = [];
+app.post("/api/contact", (req,res)=>{
+  const {name,email,message} = req.body || {};
+  if(!name || !email) return res.status(400).json({error:"Missing fields"});
+  messages.push({name,email,message,ts:Date.now()});
+  res.json({ok:true});
+});
+
+// Add a dispute (demo)
+const disputes = [];
+app.post("/api/disputes", (req,res)=>{
+  const {item,reason,details} = req.body || {};
+  if(!item || !reason) return res.status(400).json({error:"Missing fields"});
+  disputes.push({item,reason,details,status:"submitted",ts:Date.now()});
+  res.json({ok:true});
+});
+
+// List disputes
+app.get("/api/disputes", (req,res)=> res.json(disputes));
+
+const port = process.env.PORT || 3000;
+app.listen(port, ()=> console.log(`API running on ${port}`));
