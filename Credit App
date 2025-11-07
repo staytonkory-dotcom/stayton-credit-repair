@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stayton Credit Repair | World's Best Credit Repair</title>
+  <meta name="description" content="Credit repair in North Richland Hills, TX. Dispute inaccuracies, track progress, and get alerts. First 15 inquiries free." />
+  <meta name="theme-color" content="#0b1a3a">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Stayton Credit Repair</h1>
+    <p>World’s Best Credit Repair • (682) 555-1212 • staytoncreditrepair@gmail.com</p>
+  </header>
+
+  <nav class="nav">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#disputes">Disputes</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <div id="scoreCard" class="card">Current Score: <span id="score">—</span></div>
+      <div class="grid">
+        <div class="card"><strong>Items Removed:</strong> <span id="removed">0</span></div>
+        <div class="card"><strong>Open Disputes:</strong> <span id="open">0</span></div>
+        <div class="card"><strong>Alerts:</strong> <span id="alerts">0</span></div>
+      </div>
+    </section>
+
+    <section id="disputes">
+      <h2>Start a Dispute</h2>
+      <form id="disputeForm">
+        <label>Account/Item Name <input name="item" required></label>
+        <label>Reason
+          <select name="reason">
+            <option value="not-mine">Not mine</option>
+            <option value="inaccurate">Inaccurate info (name/DOB/SSN/address)</option>
+            <option value="unverifiable">Unverifiable</option>
+            <option value="duplicate">Duplicate entry</option>
+          </select>
+        </label>
+        <label>Details <textarea name="details" rows="4"></textarea></label>
+        <button type="submit">Generate Dispute Letter (PDF)</button>
+      </form>
+      <div id="disputeResult" class="card"></div>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <ul class="pricing">
+        <li><strong>$150</strong> one-time audit & strategy session</li>
+        <li><strong>$99/mo</strong> dispute management (cancel anytime)</li>
+        <li><strong>First 15 inquiries free</strong>, then $10 per inquiry</li>
+      </ul>
+      <p class="disclaimer">
+        Disclaimer: We do not guarantee specific score changes or outcomes. Services comply with CROA/FCRA; Texas residents receive state-required disclosures and cancellation rights.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <label>Name <input name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Main issue <textarea name="message" rows="4" placeholder="Tell us what’s wrong on your report…"></textarea></label>
+        <button type="submit">Send</button>
+      </form>
+      <div id="contactResult" class="card"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Stayton Credit Repair • 8500 Harwood Rd, #6718, North Richland Hills, TX 76180
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
